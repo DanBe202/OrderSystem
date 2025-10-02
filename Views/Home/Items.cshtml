@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Items";
+    
+    Item[] items = 
+    [
+    new Item("Item1",999, 999.99, "New Item2"),
+    new Item("Item2",999, 999.99, "New Item2"),
+    new Item("Item3",999, 999.99, "New Item3"),
+    new Item("Item4",999, 999.99, "New Item4"),
+    ];
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var item in items)
+{
+    <p>@item.Stringify()</p>
+}
